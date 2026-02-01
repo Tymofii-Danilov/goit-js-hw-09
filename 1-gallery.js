@@ -4,7 +4,7 @@ import"./assets/modulepreload-polyfill-B5Qt9EMX.js";/* empty css                
 		  class="gallery-image" 
 		  src="${o.preview}" 
 		  alt="${o.description}"
-          width="360"
+      width="360"
 		/>
 	</a>
 </li>`).join("");a.insertAdjacentHTML("beforeend",t);new p(".gallery a",{captionsData:"alt",captionDelay:250,captionPosition:"bottom"});
