@@ -76,7 +76,7 @@ const markup = images.map((item) => {
 		  class="gallery-image" 
 		  src="${item.preview}" 
 		  alt="${item.description}"
-          width="360"
+      width="360"
 		/>
 	</a>
 </li>`

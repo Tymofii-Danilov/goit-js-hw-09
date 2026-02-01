@@ -7,7 +7,7 @@ const STORAGE_KEY = "feedback-form-state";
 const form = document.querySelector(".feedback-form");
 const email = form.querySelector("input");
 const message = form.querySelector("textarea");
-
+savedInfo();
 form.addEventListener("input", handleInput);
 
 function handleInput(event) {
@@ -24,12 +24,13 @@ function savedInfo() {
     const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
 
     if (saved) {
+        formData = saved;
         email.value = saved.email;
         message.value = saved.message;
     }
 }
 
-savedInfo();
+
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
