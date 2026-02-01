@@ -1,8 +1,5 @@
-// Описаний в документації
 import SimpleLightbox from "simplelightbox";
-// Додатковий імпорт стилів
 import "simplelightbox/dist/simple-lightbox.min.css";
-
 
 const images = [
   {
@@ -79,6 +76,7 @@ const markup = images.map((item) => {
 		  class="gallery-image" 
 		  src="${item.preview}" 
 		  alt="${item.description}"
+          width="360"
 		/>
 	</a>
 </li>`
@@ -86,23 +84,4 @@ const markup = images.map((item) => {
 
 gallery.insertAdjacentHTML(`beforeend`, markup);
 
-let lightbox = new SimpleLightbox(".gallery a", {});
-
-// let gallery = new SimpleLightbox('.gallery a', { captions: true, captionsData: alt });
-
-// gallery.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   if (event.target.nodeName !== "IMG") {
-//     return;
-//   }
-//   const instance = basicLightbox.create(`
-//     <div class="modal">
-//         <img class="modal-img" src="${event.target.dataset.source}"/>
-//     </div>
-//     `, {
-//     onShow: (instance) => {
-//         instance.element().querySelector('.modal-img').onclick = instance.close
-//     }
-//   })
-//   instance.show();
-// })
+let lightbox = new SimpleLightbox(".gallery a", {captionsData: "alt", captionDelay: 250, captionPosition: 'bottom'});
